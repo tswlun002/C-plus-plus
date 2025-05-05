@@ -5,14 +5,19 @@ an astronomy sky survey) we want to produce a video that captures the movement o
 much smaller window across this large image. You can think of this as lens that allows us
 to focus on a trajectory of interest
 
+## DEPENDENCY LIBRARY TO INSTALL TO RECORD VIDEO
+```
+ffmpeg
+```
+
 ## RECOMMENDED USE MAKEFILE TO TEST THIS CODE AS FOLLOW:
 ### 1 compile using
 ```
-$make
+ make
 ```
 ### 2 run using 
 ```
-$ make run
+ make run
 ```
 
 
