@@ -15,9 +15,12 @@ $(OBJECT): $(SOURCE)
 
 #execution rule 
 run:
-	chmod +x frametester;./frametester.sh
+	chmod +x frametester.sh;./frametester.sh
 
-#clean rule     
+#clean rule
+clean-image:
+	rm -f *.pgm
+	rm -f *.png
 clean:
 	@rm	-f	*.o 
 	@rm	-f	extractor

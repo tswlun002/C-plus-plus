@@ -67,10 +67,10 @@ create_frame_sequence()
    ERR_VAR=$($1 2>&1)
    if [ $? -eq 0 ]; then
          echo -e "\e[1;32m Success: \e[0m Building video sequence."
-         mkdir $2
+         mkdir -p "$2"
          # Move all of the frames to their own folder (This does assume the student is writing all of the images to the working directory)
          # Change FRAME_SRC if they write it to another folder (like ./bin/ or ./out/)
-         find "$FRAME_SRC" -name "*.pgm" ! -name "$IMAGE" -exec mv -t "$2" {} +
+         find "$FRAME_SRC" -name "*.pgm" ! -name "$IMAGE" -exec mv -i {} "$2"/ \;
          num_frames=$(find ./$2/ -name "*.pgm" | wc -l)
          col="\e[1;32m"
          if [ $num_frames -ne $3 ]; then
